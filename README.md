@@ -68,3 +68,8 @@ Evaluation:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 python auc.py --input_path ./ --input_file test_200_word_RNN_results.txt --threshold 0.5 --output_file RNN_200_word_auc.txt
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Datasets
+------------
+
+The datasets included here are a filtered version of a whole dataset with malicious and benign URLs that has been compiled specifically for this project and is available online: https://www.kaggle.com/datasets/sarahhamer/malicious-and-benign-urls-2010-2026. The versions in here are already preprocessed and formatted in a way that is compatible with the models used.
