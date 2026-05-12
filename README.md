@@ -17,6 +17,7 @@ Example Commands to Run the Scripts
 
 Since these scripts use an outdated version of tensorflow, it is recommended to run them in a docker container or similar. The example commands also list additional parts such as 'nice' to manage memory use, which can be left out depending on the system this is run on.
 
+
 **Baseline URLNet**
 Training:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -33,6 +34,7 @@ Evaluation:
 python auc.py --input_path ./ --input_file test_200_full_results.txt --threshold 0.5 --output_file 200_full_auc.txt
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
 **URLNet and Transformer Hybrid**
 Training:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -48,6 +50,7 @@ Evaluation:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 python auc.py --input_path ./ --input_file test_200_word_transformer_results.txt --threshold 0.5 --output_file transformer_200_word_auc.txt
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 **URLNet and RNN Hybrid**
 Training:
