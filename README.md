@@ -17,7 +17,9 @@ Example Commands to Run the Scripts
 
 Since these scripts use an outdated version of tensorflow, it is recommended to run them in a docker container or similar. The example commands also list additional parts such as 'nice' to manage memory use, which can be left out depending on the system this is run on.
 <br><br>
+
 **Baseline URLNet**
+
 Training:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 nice -n 10 python training.py --data_path processed_data_minimized/train.txt --min_freq 1 --mode 3 --embedding_dim 32 --filter_sizes 3,4,5,6 --epochs 5 --batch_size 128 --lr 0.001 --print_every 50 --eval_every 500 --output_dir runs/training_200_full
@@ -34,6 +36,7 @@ python auc.py --input_path ./ --input_file test_200_full_results.txt --threshold
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <br><br>
 **URLNet and Transformer Hybrid**
+
 Training:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 nice -n 10 python training_transformer.py --data_path processed_data_minimized/train.txt --min_freq 1 --mode 2 --embedding_dim 32 --filter_sizes 3,4,5,6 --epochs 5 --batch_size 128 --lr 0.001 --print_every 50 --eval_every 500 --output_dir runs/training_200_word_transformer --max_structs 50 --trans_dim 64 --trans_layers 3 --trans_heads 4
@@ -50,6 +53,7 @@ python auc.py --input_path ./ --input_file test_200_word_transformer_results.txt
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <br><br>
 **URLNet and RNN Hybrid**
+
 Training:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 nice -n 10 python training_RNN.py --data_path processed_data_minimized/train.txt --min_freq 1 --mode 2 --embedding_dim 32 --filter_sizes 3,4,5,6 --epochs 5 --batch_size 128 --lr 0.001 --print_every 50 --eval_every 500 --rnn_dim 64 --rnn_layers 2 --output_dir runs/training_200_word_RNN
